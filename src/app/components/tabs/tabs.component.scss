@@ -1,0 +1,28 @@
+.tabs-section {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    background: linear-gradient(to right, #ebeced, #d1d5d6);
+}
+
+.tab-wrapper {
+    position: relative;
+    height: 60px;
+    background: linear-gradient(rgba(255, 255, 255, 0) 58px, rgba(255, 255, 255, 1));
+}
+
+.below-tabs {
+    position: relative;
+    flex-grow: 1;
+}
+
+.active-highlight {
+    position: absolute;
+    z-index: 20;
+    top: 0;
+    left: 0;
+    height: 60px;
+    width: 100%;
+    background-color: white;
+}

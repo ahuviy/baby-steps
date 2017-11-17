@@ -1,0 +1,28 @@
+@import "./scss/variables";
+
+.container {
+    width: 980px;
+    height: $container-height;
+    background-color: white;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.jumbotron {
+    height: $jumbotron-height;
+    background-image: url(/assets/images/header_text.jpg);
+}
+
+.content {
+    margin-top: 60px;
+    height: $container-height - $jumbotron-height - 60px;
+    display: flex;
+}
+
+.left-section {
+    width: 260px;
+}
+
+.right-section {
+    flex-grow: 1;
+}
