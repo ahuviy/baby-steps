@@ -14,15 +14,16 @@
 }
 
 .content {
-    margin-top: 60px;
-    height: $container-height - $jumbotron-height - 60px;
+    margin-top: $content-margin-top;
+    height: $content-height;
     display: flex;
 }
 
 .left-section {
-    width: 260px;
+    width: 310px;
 }
 
 .right-section {
+    width: 400px;
     flex-grow: 1;
 }

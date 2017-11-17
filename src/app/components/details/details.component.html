@@ -1,0 +1,8 @@
+<div #scrollable class="details">
+    <div class="section" *ngFor="let tab of tabsService.tabs">
+        <div class="icon heading{{activeTabId}}"></div>
+        <div class="body">
+            <p *ngFor="let paragraph of tab.paragraphs">{{paragraph}}</p>
+        </div>
+    </div>
+</div>

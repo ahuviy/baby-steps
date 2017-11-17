@@ -1,0 +1,14 @@
+<div class="navigation-section">
+    <div #highlight class="highlight-box"></div>
+    <div class="tab-wrapper" *ngFor="let tab of tabsService.tabs">
+        <bs-tab
+            [tab]="tab"
+            [isActive]="tab.tabId === activeTabId"
+            (click)="tabsService.setActive(tab.tabId)">
+        </bs-tab>
+        <div class="right-shadow"></div>
+    </div>
+    <div class="below-tabs">
+        <div class="right-shadow"></div>
+    </div>
+</div>

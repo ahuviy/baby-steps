@@ -1,0 +1,21 @@
+@import "../../scss/variables";
+
+.details {
+    height: $content-height;
+    margin-left: 70px;
+    margin-right: 70px;
+    overflow-y: hidden;
+}
+
+.section {
+    height: $content-height;
+}
+
+.body {
+    p {
+        font-family: Helvetica, sans-serif;
+        font-size: 13px;
+        line-height: 18px;
+        color: #65686f;
+    }
+}

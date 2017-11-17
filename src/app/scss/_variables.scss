@@ -1,2 +1,4 @@
 $container-height: 1000px;
 $jumbotron-height: 276px;
+$content-margin-top: 60px;
+$content-height: $container-height - $jumbotron-height - $content-margin-top;

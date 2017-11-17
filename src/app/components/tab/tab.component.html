@@ -1,6 +1,8 @@
 <div class="tab">
     <div class="tab-inner">
-        <div class="text" [class.active]="isActive">{{text}}</div>
-        <div class="icon" [style.background-image]="bgImage"></div>
+        <div class="text" [class.active]="isActive">{{tab.tabText}}</div>
+        <div class="icon-wrapper">
+            <div class="icon tab-icon{{tab.tabId}}" [class.active]="isActive"></div>
+        </div>
     </div>
 </div>
