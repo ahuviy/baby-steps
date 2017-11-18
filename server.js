@@ -1,3 +1,6 @@
+/**
+ * The server is a simple Express.js app.
+ */
 const friends = [
     { "firstName": "Paul", "lastName": "Taylor", "babyStep": 2 },
     { "firstName": "Sharon", "lastName": "Thomas", "babyStep": 3 },
@@ -28,12 +31,15 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 const STATIC_DIR = './dist';
 
+// Static files
 app.use(express.static(STATIC_DIR));
 
+// AJAX requests
 app.get('/api/friends', (req, res) => {
     res.json(friends);
 });
 
+// Start server
 app.listen(PORT, err => {
     if (err)
         throw 'could not open server';
