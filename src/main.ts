@@ -8,4 +8,11 @@ if (environment.production) {
 }
 
 platformBrowserDynamic().bootstrapModule(AppModule)
-    .catch(err => console.log(err));
+    .catch(err => console.log(err))
+    .then(registerServiceWorker);
+
+function registerServiceWorker() {
+    if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('/babysteps-sw.js');
+    }
+}
