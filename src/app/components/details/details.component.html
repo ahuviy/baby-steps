@@ -3,6 +3,7 @@
         <div class="icon heading{{activeTabId}}"></div>
         <div class="body">
             <p *ngFor="let paragraph of tab.paragraphs">{{paragraph}}</p>
+            <p class="dynamic-data" [innerHtml]="messages[tab.tabId]"></p>
         </div>
     </div>
 </div>
