@@ -1,28 +1,25 @@
 # BabySteps
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.4.2.
+The front end is built with Angular 4 and the back end is built with Express.js.
 
-## Development server
+## Check the project out
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+View the code at: https://github.com/ahuviy/baby-steps
+Check out the site at work at: https://ahuvi-babysteps.herokuapp.com/
 
-## Code scaffolding
+## Local deployment
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+To deploy the app locally, please clone this repository. Make sure you have the latest version of node.js installed. You can download node.js at: https://nodejs.org/en/download/. In the project directory, run the command 'node server.js' to launch the server. Navigate to `http://localhost:3000/`.
 
-## Build
+## Building the app
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
+The app is already built and ready for deployment. However, if you wish to build it yourself, make sure you have the latest version of node.js installed. In the project directory, run 'npm install'. This will install all needed dependencies. Then run 'npm run build' to build the app and the service-worker. The built app will be located at the 'dist' directory. You can deploy by running the command 'node server.js'.
 
-## Running unit tests
+## Getting around the code
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-Before running the tests make sure you are serving the app via `ng serve`.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+- The app initializes from main.ts: the AppModule is bootstrapped, and a service-worker is registered for offline caching of assets.
+- AppModule (app.module.ts) bootstraps the AppComponent (app.component.ts), which is the root component of the app. You can see its selector in index.html (<bs-app>).
+- From AppComponent, the component tree unfolds and the app is populated.
+- Several services are used: GsapService is in charge of transition-animations; TabsService is in charge of managing the tabs-state; FriendsService is in charge of fetching and processing the friends' data from the server.
+- The app styles are divided to global and local styles. The global styles are all declared in styles.scss. This file is an aggregator of several files that are all under the scss/ folder. The local styles are declared in each component in its private scss file. They are scoped to their component and their component only, and are not available globally.
