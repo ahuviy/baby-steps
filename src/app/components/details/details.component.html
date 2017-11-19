@@ -1,6 +1,6 @@
 <div #scrollable class="details">
-    <div class="section" *ngFor="let tab of tabsService.tabs">
-        <div class="icon heading{{activeTabId}}"></div>
+    <div class="section" *ngFor="let tab of tabsService.tabs; index as i">
+        <div class="icon heading{{tabsService.tabs[i].tabId}}"></div>
         <div class="body">
             <p *ngFor="let paragraph of tab.paragraphs">{{paragraph}}</p>
             <p class="dynamic-data" [innerHtml]="messages[tab.tabId]"></p>

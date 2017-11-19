@@ -12,7 +12,7 @@ platformBrowserDynamic().bootstrapModule(AppModule)
     .then(registerServiceWorker);
 
 function registerServiceWorker() {
-    if ('serviceWorker' in navigator) {
+    if ('serviceWorker' in navigator && location.hostname !== 'localhost') {
         navigator.serviceWorker.register('/babysteps-sw.js');
     }
 }
